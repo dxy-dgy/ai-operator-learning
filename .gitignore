@@ -2,6 +2,7 @@
 *.o
 *.out
 *.exe
+*.txt
 
 # 可执行文件
 main
