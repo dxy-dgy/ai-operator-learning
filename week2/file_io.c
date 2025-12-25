@@ -1,10 +1,9 @@
 #include <stdio.h>
 int main(){
-    FILE* fp = fopen("data.txt","w");
+    int a[5] = {1,2,3,4,5};
+    FILE* fp = fopen("data.bin","wb");
     if (!fp) return 1;
-    for (int i = 1; i < 5; i++){
-        fprintf(fp, "%d %.2lf\n", i, 0.1*i);
-    }
+    fwrite(a, sizeof(int), 5, fp);
     fclose(fp);
     return 0;
 }
