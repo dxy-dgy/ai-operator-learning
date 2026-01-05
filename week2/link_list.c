@@ -5,6 +5,7 @@ typedef struct Node{
     struct Node* next;
 } Node;
 void head_insert(Node* head, int val){
+    // 头插法增加节点
     if (head == NULL){
         return;
     }
@@ -18,6 +19,7 @@ void head_insert(Node* head, int val){
     head->next = new_node;
 }
 void tail_insert(Node* head, int val){
+    // 尾插法增加节点
     if (head == NULL){
         return;
     }
@@ -35,6 +37,7 @@ void tail_insert(Node* head, int val){
     p->next = new_node;
 }
 void print_all(Node* head){
+    // 打印链表所有节点的值
     if (head == NULL || head->next == NULL){
         printf("当前为空链表！\n");
         return;
